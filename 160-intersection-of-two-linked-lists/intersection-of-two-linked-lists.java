@@ -33,16 +33,16 @@ public class Solution {
         if (length1 > length2) {
             int step = length1 - length2;
             for (int i = 0; i < step; i++) {
-                if(temp1 != null )temp1 = temp1.next;
+                temp1 = temp1.next;
             }
         } else {
             int step = length2 - length1;
             for (int i = 0; i < step; i++) {
-                if(temp2 != null) temp2 = temp2.next;
+                temp2 = temp2.next;
             }
         }
 
-        while (temp1 != null && temp2 != null && temp1 != temp2) {
+        while (temp1 != temp2) {
             temp1 = temp1.next;
             temp2 = temp2.next;
         }
